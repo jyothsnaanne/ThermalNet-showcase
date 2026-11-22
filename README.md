@@ -32,9 +32,6 @@ There is no website or login. ThermalNet is a program with three kinds of use:
 | ![Another person](docs/screenshots/02-live-another-person.png) | ![Two people](docs/screenshots/03-live-two-people.png) |
 | **A second person, never in the training data, at 0.70.** | **Both found together; the right one is partly out of frame.** |
 
-![Known weakness: chair](docs/screenshots/05-known-weakness-chair.png)
-**A known weakness (this shot is from before a fix).** A warm chair back was labelled `car`: the street datasets taught the model what car rears look like. Car and bicycle are now hidden in the indoor live view, but the chair itself still needs more labelled examples.
-
 ### Developer: the bug behind the poor early results
 
 ![Label bug](docs/screenshots/04-label-bug.png)
