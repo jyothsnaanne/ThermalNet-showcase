@@ -2,7 +2,7 @@
 
 > A thermal camera sees heat, not light, so it works in total darkness. But ordinary detectors are trained on colour photos and struggle on flat, low-texture thermal images. ThermalNet is an object detector I built from scratch in PyTorch for a **FLIR A50** thermal camera. It uses **no YOLO, no Roboflow and no pretrained weights**, looks for edges and heat contrast inside the model and again inside every box it draws, and finds people live at about 30 frames per second.
 
-![ThermalNet: one frame, step by step, with real outputs from the model](docs/architecture.png)
+![ThermalNet at a glance: live detection, inside the model, data and training](docs/architecture.png)
 
 **Author:** Jyothsna Anne · **Source code:** private repository, available on request
 
@@ -64,6 +64,12 @@ On the own test frames v2 finds all 60 people with 5 false boxes (precision 0.92
 - Object classes have only 3 to 6 test images and about 15 training images each, with automatic boxes. Their numbers are noisy.
 
 ## How it works
+
+Every picture below is a real output of the trained model on one held-out thermal frame. The pictures stay gray; the colour is only in the text.
+
+![ThermalNet: one frame, step by step, with real outputs from the model](docs/architecture-steps.png)
+
+In words:
 
 1. **Pre-process:** gray, contrast-equalized (CLAHE), 416×416.
 2. **Edge detector (inside the model):** Sobel, Laplacian and local heat contrast plus 3 learned filters give 8 extra channels next to the gray image.
