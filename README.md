@@ -2,7 +2,7 @@
 
 > A thermal camera sees heat, not light, so it works in total darkness. But ordinary detectors are trained on colour photos and struggle on flat, low-texture thermal images. ThermalNet is an object detector I built from scratch in PyTorch for a **FLIR A50** thermal camera. It uses **no YOLO, no Roboflow and no pretrained weights**, looks for edges and heat contrast inside the model and again inside every box it draws, and finds people live at about 30 frames per second.
 
-![ThermalNet architecture](docs/architecture.png)
+![ThermalNet: one frame, step by step, with real outputs from the model](docs/architecture.png)
 
 **Author:** Jyothsna Anne · **Source code:** private repository, available on request
 
